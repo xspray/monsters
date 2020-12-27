@@ -1,5 +1,5 @@
 import React from 'react'
-import { Fiche } from '../fiche/fiche.component'
+import { Fiche }  from '../fiche/fiche.component'
 import './fiche-list-styles.css'
 
 export const FicheList = props => {
@@ -8,9 +8,9 @@ export const FicheList = props => {
   
       {
   
-        props.monstres.map(monstre => (
+        props.monstres.slice(0, props.nbCard).map(monstre => (
   
-            <Fiche key={monstre.id} monstre={monstre}/>
+            <Fiche key={monstre.id} monstre={monstre} idSet={props.idSet}/>
   
         ))
   
